@@ -18,22 +18,22 @@ BEGIN {
 }
 
 my %character = (   #   ASCII   UTF8
-    "\xE2\x80\x9A" => [ ',',    "\x201A" ],     # 82 - SINGLE LOW-9 QUOTATION MARK
-    "\xE2\x80\x9E" => [ ',,',   "\x201E" ],     # 84 - DOUBLE LOW-9 QUOTATION MARK
-    "\xE2\x80\xA6" => [ '...',  "\x2026" ],     # 85 - HORIZONTAL ELLIPSIS
-    "\xCB\x86"     => [ '^',    "\x02C6" ],     # 88 - MODIFIER LETTER CIRCUMFLEX ACCENT
-    "\xE2\x80\x98" => [ '`',    "\x2018" ],     # 91 - LEFT SINGLE QUOTATION MARK
-    "\xE2\x80\x99" => [ q{'},   "\x2019" ],     # 92 - RIGHT SINGLE QUOTATION MARK
-    "\xE2\x80\x9C" => [ '"',    "\x201C" ],     # 93 - LEFT DOUBLE QUOTATION MARK
-    "\xE2\x80\x9D" => [ '"',    "\x201D" ],     # 94 - RIGHT DOUBLE QUOTATION MARK
-    "\xE2\x80\xA2" => [ '*',    "\x2022" ],     # 95 - BULLET
-    "\xE2\x80\x93" => [ '-',    "\x2013" ],     # 96 - EN DASH
-    "\xE2\x80\x94" => [ '-',    "\x2014" ],     # 97 - EM DASH
+    "\xE2\x80\x9A" => [ ',',    "\x{201A}" ],     # 82 - SINGLE LOW-9 QUOTATION MARK
+    "\xE2\x80\x9E" => [ ',,',   "\x{201E}" ],     # 84 - DOUBLE LOW-9 QUOTATION MARK
+    "\xE2\x80\xA6" => [ '...',  "\x{2026}" ],     # 85 - HORIZONTAL ELLIPSIS
+    "\xCB\x86"     => [ '^',    "\x{02C6}" ],     # 88 - MODIFIER LETTER CIRCUMFLEX ACCENT
+    "\xE2\x80\x98" => [ '`',    "\x{2018}" ],     # 91 - LEFT SINGLE QUOTATION MARK
+    "\xE2\x80\x99" => [ q{'},   "\x{2019}" ],     # 92 - RIGHT SINGLE QUOTATION MARK
+    "\xE2\x80\x9C" => [ '"',    "\x{201C}" ],     # 93 - LEFT DOUBLE QUOTATION MARK
+    "\xE2\x80\x9D" => [ '"',    "\x{201D}" ],     # 94 - RIGHT DOUBLE QUOTATION MARK
+    "\xE2\x80\xA2" => [ '*',    "\x{2022}" ],     # 95 - BULLET
+    "\xE2\x80\x93" => [ '-',    "\x{2013}" ],     # 96 - EN DASH
+    "\xE2\x80\x94" => [ '-',    "\x{2014}" ],     # 97 - EM DASH
 
-    "\xE2\x80\xB9" => [ '<',    "\x2039" ],     # 8B - SINGLE LEFT-POINTING ANGLE
-                                                #      QUOTATION MARK
-    "\xE2\x80\xBA" => [ '>',    "\x203A" ],     # 9B - SINGLE RIGHT-POINTING ANGLE
-                                                #      QUOTATION MARK
+    "\xE2\x80\xB9" => [ '<',    "\x{2039}" ],     # 8B - SINGLE LEFT-POINTING ANGLE
+                                                  #      QUOTATION MARK
+    "\xE2\x80\xBA" => [ '>',    "\x{203A}" ],     # 9B - SINGLE RIGHT-POINTING ANGLE
+                                                  #      QUOTATION MARK
 );
 
 my $characters_re = '(' . join( '|', keys %character ) . ')';
